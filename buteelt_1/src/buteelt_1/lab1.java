@@ -1,39 +1,58 @@
 package buteelt_1;
 
+class Node {
+    int data;
+    Node prev;
+    Node next;
+
+    public Node(int data) {
+        this.data = data;
+        this.prev = null;
+        this.next = null;
+    }
+}
+
 public class lab1 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		class Queue:
-		    def __init__(self):
-		        self.items = []
+    Node head;
+    Node tail;
 
-		    def is_empty(self):
-		        return len(self.items) == 0
+    public lab1() {
+        this.head = null;
+        this.tail = null;
+    }
 
-		    def enqueue(self, item):
-		        self.items.append(item)
+    public void addNode(int data) {
+        Node newNode = new Node(data);
 
-		    def dequeue(self):
-		        if not self.is_empty():
-		            return self.items.pop(0)
-		        else:
-		            raise IndexError("Dequeue from an empty queue")
+        if (head == null) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            tail.next = newNode;
+            newNode.prev = tail;
+            tail = newNode;
+        }
+    }
 
-		    def size(self):
-		        return len(self.items)
+    public void displayList() {
+        Node current = head;
+        System.out.print("Doubly Linked List: ");
+        while (current != null) {
+            System.out.print(current.data + " ");
+            current = current.next;
+        }
+        System.out.println();
+    }
 
-		my_queue "="; Queue();
-		my_queue.enqueue(1);
-		my_queue.enqueue(2);
-		my_queue.enqueue(3);
+    public static void main(String[] args) {
+        lab1 doublyLinkedList = new lab1();
 
-		print("Queue size:", my_queue.size()); 
+        doublyLinkedList.addNode(1);
+        doublyLinkedList.addNode(2);
+        doublyLinkedList.addNode(3);
 
-		print("Dequeue:", my_queue.dequeue()) ; 
-
-		print("Queue size after dequeue:", my_queue.size())  ;
-
-	}
-
+        doublyLinkedList.displayList();
+    }
 }
+
