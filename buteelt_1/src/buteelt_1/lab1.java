@@ -87,7 +87,6 @@ public class lab1 {
             current = current.next;
         }
     }
-//hgfhghf
     public int getSize() {
         int size = 0;
         Node current = head;
@@ -140,7 +139,7 @@ public class lab1 {
         doublyLinkedList.displayList();
 
         // зангилаа нэмэх
-        doublyLinkedList.addNodeAfter(2,6);
+        doublyLinkedList.addNodeAfter(10,18);
         doublyLinkedList.displayList();
 
         // зангилаа устгах
@@ -159,4 +158,4 @@ public class lab1 {
         //3:31
     }
 }
-:
+
