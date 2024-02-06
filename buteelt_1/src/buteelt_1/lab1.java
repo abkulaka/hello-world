@@ -150,10 +150,10 @@ public class lab1 {
         // дараалал доторх нийт тоон хэмжээ
         System.out.println("Дарааллын хэмжээ: " + doublyLinkedList.getSize());
 
-        // Check if list is empty
+        // Хоосон эсэхийг шалгах
         System.out.println("Дараалал хоосон эсэх? " + doublyLinkedList.isEmpty());
 
-        // Reverse the list
+        // Урвуу дараалал
         doublyLinkedList.reverseList();
         doublyLinkedList.displayList();
     }
