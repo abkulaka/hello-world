@@ -156,5 +156,7 @@ public class lab1 {
         // Урвуу дараалал
         doublyLinkedList.reverseList();
         doublyLinkedList.displayList();
+        //3:31
     }
 }
+:
