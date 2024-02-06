@@ -87,7 +87,7 @@ public class lab1 {
             current = current.next;
         }
     }
-
+//hgfhghf
     public int getSize() {
         int size = 0;
         Node current = head;
@@ -129,22 +129,22 @@ public class lab1 {
     public static void main(String[] args) {
         lab1 doublyLinkedList = new lab1();
 
-        doublyLinkedList.addNode(1);
-        doublyLinkedList.addNode(2);
-        doublyLinkedList.addNode(3);
+        doublyLinkedList.addNode(5);
+        doublyLinkedList.addNode(7);
+        doublyLinkedList.addNode(18);
 
         doublyLinkedList.displayList();
 
         // 1 утга нэмэх
-        doublyLinkedList.addNodeToFront(0);
+        doublyLinkedList.addNodeToFront(10);
         doublyLinkedList.displayList();
 
         // зангилаа нэмэх
-        doublyLinkedList.addNodeAfter(2, 4);
+        doublyLinkedList.addNodeAfter(2,6);
         doublyLinkedList.displayList();
 
         // зангилаа устгах
-        doublyLinkedList.deleteNode(3);
+        doublyLinkedList.deleteNode(18);
         doublyLinkedList.displayList();
 
         // дараалал доторх нийт тоон хэмжээ
