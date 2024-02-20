@@ -65,6 +65,20 @@ public class lab1 {
         }
     }
 
+    public void insertAfter(Node prevNode, int data) {
+        if (prevNode == null) {
+            System.out.println("Previous node cannot be null");
+            return;
+        }
+
+        Node newNode = new Node(data);
+        newNode.next = prevNode.next;
+        if (prevNode.next != null)
+            prevNode.next.prev = newNode;
+        prevNode.next = newNode;
+        newNode.prev = prevNode;
+    }
+
     public void deleteNode(int key) {
         Node current = head;
         while (current != null) {
@@ -87,6 +101,7 @@ public class lab1 {
             current = current.next;
         }
     }
+
     public int getSize() {
         int size = 0;
         Node current = head;
@@ -139,11 +154,16 @@ public class lab1 {
         doublyLinkedList.displayList();
 
         // зангилаа нэмэх
-        doublyLinkedList.addNodeAfter(10,18);
+        doublyLinkedList.addNodeAfter(10, 17);
         doublyLinkedList.displayList();
 
         // зангилаа устгах
         doublyLinkedList.deleteNode(18);
+        doublyLinkedList.displayList();
+
+        // insert node after specific node
+        Node prevNode = doublyLinkedList.head.next; // Insert after node with value 7
+        doublyLinkedList.insertAfter(prevNode, 25);
         doublyLinkedList.displayList();
 
         // дараалал доторх нийт тоон хэмжээ
@@ -155,7 +175,7 @@ public class lab1 {
         // Урвуу дараалал
         doublyLinkedList.reverseList();
         doublyLinkedList.displayList();
-        //3:38
     }
 }
+
 
